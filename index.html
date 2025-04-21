@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Name – Solutions Hub</title>
+<title>Prompting Guide – Solutions Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./src/solution_overview/prompting-guide.html" rel="next">
 <link href="./images/bee.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -124,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Problem Definition</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Prompting Guide</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -139,26 +172,9 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Problem Definition</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Solution Overview</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./src/solution_overview/prompting-guide.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prompting Guide</span></a>
   </div>
 </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -169,11 +185,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-why" id="toc-the-why" class="nav-link active" data-scroll-target="#the-why">The Why</a>
+  <li><a href="#ibm-watsonx-code-assistant-prompting-guide-practical-hands-on" id="toc-ibm-watsonx-code-assistant-prompting-guide-practical-hands-on" class="nav-link active" data-scroll-target="#ibm-watsonx-code-assistant-prompting-guide-practical-hands-on">IBM watsonx Code Assistant Prompting Guide: Practical hands-on</a></li>
+  <li><a href="#here-are-a-few-key-examples-of-simple-ways-to-enhance-your-experience" id="toc-here-are-a-few-key-examples-of-simple-ways-to-enhance-your-experience" class="nav-link" data-scroll-target="#here-are-a-few-key-examples-of-simple-ways-to-enhance-your-experience">Here are a few key examples of simple ways to enhance your experience👇</a>
   <ul class="collapse">
-  <li><a href="#problem-details" id="toc-problem-details" class="nav-link" data-scroll-target="#problem-details">Problem Details</a></li>
-  <li><a href="#additional-context" id="toc-additional-context" class="nav-link" data-scroll-target="#additional-context">Additional Context</a></li>
+  <li><a href="#use-personas-or-role-names-to-provide-context" id="toc-use-personas-or-role-names-to-provide-context" class="nav-link" data-scroll-target="#use-personas-or-role-names-to-provide-context">Use personas or role names to provide context</a></li>
+  <li><a href="#avoid-give-me-a-rock-no-not-that-rock-by-starting-with-specific-details-to-reduce-iterations" id="toc-avoid-give-me-a-rock-no-not-that-rock-by-starting-with-specific-details-to-reduce-iterations" class="nav-link" data-scroll-target="#avoid-give-me-a-rock-no-not-that-rock-by-starting-with-specific-details-to-reduce-iterations">Avoid “give me a rock / no, not that rock” by starting with specific details, to reduce iterations</a></li>
+  <li><a href="#parameterize-parameterize-parameterize" id="toc-parameterize-parameterize-parameterize" class="nav-link" data-scroll-target="#parameterize-parameterize-parameterize">Parameterize Parameterize Parameterize</a></li>
+  <li><a href="#generating-api-version-specific-code." id="toc-generating-api-version-specific-code." class="nav-link" data-scroll-target="#generating-api-version-specific-code.">Generating API version specific code.</a></li>
+  <li><a href="#encapsulate-separate-contexts-into-separate-chats" id="toc-encapsulate-separate-contexts-into-separate-chats" class="nav-link" data-scroll-target="#encapsulate-separate-contexts-into-separate-chats">Encapsulate separate contexts into separate chats</a></li>
+  <li><a href="#also-good-to-remember" id="toc-also-good-to-remember" class="nav-link" data-scroll-target="#also-good-to-remember">Also good to remember</a></li>
   </ul></li>
+  <li><a href="#test-your-knowledge-so-far" id="toc-test-your-knowledge-so-far" class="nav-link" data-scroll-target="#test-your-knowledge-so-far">Test your knowledge so far</a></li>
   </ul>
 </nav>
     </div>
@@ -182,8 +204,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Name</h1>
-<p class="subtitle lead">Subtitle</p>
+<h1 class="title">Prompting Guide</h1>
+<p class="subtitle lead">Watson Code Assistant</p>
 </div>
 
 
@@ -200,26 +222,126 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<span class="dot">SL</span>  Samuel Lee 
-<span class="dot">BK</span>  Bo Kulbacki 
+<span class="dot">SL</span>  Pete Nuwayser 
+<span class="dot">BK</span>  Gerald Trotman 
+<span class="dot">BK</span>  Adam Hayden 
 <p><br></p>
-<section id="the-why" class="level2">
-<h2 class="anchored" data-anchor-id="the-why">The Why</h2>
-<p>(High-level description of the business challenges and client pain points)</p>
-<section id="problem-details" class="level3">
-<h3 class="anchored" data-anchor-id="problem-details">Problem Details</h3>
-<p>Sed elementum convallis quam, sed tempor massa dictum sit amet. Phasellus ultricies ante id massa scelerisque interdum. Vestibulum vitae volutpat felis. Sed metus magna, malesuada vitae odio eu, volutpat aliquam odio. Mauris eget purus ex. Praesent nec gravida lorem. Nam rhoncus bibendum nulla at viverra. Curabitur at diam sem. Pellentesque semper venenatis lorem quis pharetra. Cras venenatis consectetur ante vitae mattis. Etiam in augue vel nunc euismod sodales vitae eu arcu.</p>
-<p>Maecenas tempus ultricies sapien, porta suscipit est facilisis quis. Ut imperdiet massa condimentum sapien lobortis, dictum eleifend enim cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean interdum vel velit non dictum. Suspendisse bibendum neque ut nulla condimentum, quis dictum sem consectetur. Integer quis arcu sem. Sed condimentum dolor sed libero posuere, sed tristique nulla cursus. In hac habitasse platea dictumst. Aenean ullamcorper condimentum risus, at semper tortor consequat eu.</p>
-<p>Pellentesque a semper nisl, a vehicula libero. Mauris aliquam porttitor nibh ut porttitor. Praesent eu sem lacinia, volutpat dolor id, interdum enim. Etiam sit amet urna rhoncus, iaculis ex hendrerit, suscipit urna. Duis id porta massa, ac ultrices nulla. Vestibulum ut rutrum lacus, ac vulputate libero. Sed metus massa, maximus ac vulputate nec, lacinia sit amet felis.</p>
+<section id="ibm-watsonx-code-assistant-prompting-guide-practical-hands-on" class="level2">
+<h2 class="anchored" data-anchor-id="ibm-watsonx-code-assistant-prompting-guide-practical-hands-on">IBM watsonx Code Assistant Prompting Guide: Practical hands-on</h2>
+<p><img src="https://github.com/user-attachments/assets/d44d99e9-8d0b-42f8-a0af-639145e79839" width="300" align="left" alt="prompt-guide-8"></p>
+<p>▶️ <em>A code editor extension that captures and transmits prompt and context information for inference and captures feed-back from the user to improve model and service quality.</em></p>
+<p>▶️ <em>An inference pipeline for combining and processing natural language and code to get code suggestions from a Large Language Models (LLMs).</em></p>
+<p>▶️ <em>A content matching pipeline that finds training examples that are similar to the code suggestions.</em></p>
+<p>▶️ <em>An analysis framework that collects and processes feedback data to make it consumable by a wide range of analysis tools, ultimately for the purpose of improving model quality and user experience.</em></p>
+<p>One of the key advantages of watsonx Code Assistant is its ability to leverage <strong>context</strong> and industry <strong>best practices</strong> to generate intelligent suggestions. As you use watsonx Code Assistant, you’ll notice that it incorporates context from the overall source file and the specific paragraph to provide more accurate recommendations. It analyzes the code you have already written and suggests improvements or additions based on established best practices.</p>
+<hr>
 </section>
-<section id="additional-context" class="level3">
-<h3 class="anchored" data-anchor-id="additional-context">Additional Context</h3>
-<p>Sed elementum convallis quam, sed tempor massa dictum sit amet. Phasellus ultricies ante id massa scelerisque interdum. Vestibulum vitae volutpat felis. Sed metus magna, malesuada vitae odio eu, volutpat aliquam odio. Mauris eget purus ex. Praesent nec gravida lorem. Nam rhoncus bibendum nulla at viverra. Curabitur at diam sem. Pellentesque semper venenatis lorem quis pharetra. Cras venenatis consectetur ante vitae mattis. Etiam in augue vel nunc euismod sodales vitae eu arcu.</p>
-<p>Maecenas tempus ultricies sapien, porta suscipit est facilisis quis. Ut imperdiet massa condimentum sapien lobortis, dictum eleifend enim cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean interdum vel velit non dictum. Suspendisse bibendum neque ut nulla condimentum, quis dictum sem consectetur. Integer quis arcu sem. Sed condimentum dolor sed libero posuere, sed tristique nulla cursus. In hac habitasse platea dictumst. Aenean ullamcorper condimentum risus, at semper tortor consequat eu.</p>
-<p>Pellentesque a semper nisl, a vehicula libero. Mauris aliquam porttitor nibh ut porttitor. Praesent eu sem lacinia, volutpat dolor id, interdum enim. Etiam sit amet urna rhoncus, iaculis ex hendrerit, suscipit urna. Duis id porta massa, ac ultrices nulla. Vestibulum ut rutrum lacus, ac vulputate libero. Sed metus massa, maximus ac vulputate nec, lacinia sit amet felis.</p>
+<section id="here-are-a-few-key-examples-of-simple-ways-to-enhance-your-experience" class="level2">
+<h2 class="anchored" data-anchor-id="here-are-a-few-key-examples-of-simple-ways-to-enhance-your-experience">Here are a few key examples of simple ways to enhance your experience👇</h2>
+<section id="use-personas-or-role-names-to-provide-context" class="level3">
+<h3 class="anchored" data-anchor-id="use-personas-or-role-names-to-provide-context">Use personas or role names to provide context</h3>
+<p>The LLM supporting watsonx Code Assistant is tuned to support 116 different programming languages. When prompting for content, explanations, or opportunities for improvement, it’s important to provide context that includes the role or persona that would otherwise be expected to produce the content without AI.</p>
+<p>Let’s start with a basic query for language recommendations. Suppose you work for an operational technology company that produces embedded systems, sensors, and other instruments. You want to implement the UNIX <code>cat</code> command and ask the following question:</p>
+<p><strong>Good:</strong> <code>Between C, C++, and Ada, which language is best for implementing the UNIX "cat" command?</code></p>
+<p>This is a good start, and one improvement would be to prepend a sentence that provides more context. Consider the following:</p>
+<p><strong>Better:</strong> <code>You are an embedded systems programmer. Between C, C++, and Ada, which language is best for implementing the UNIX "cat" command?</code></p>
+<p>This is better because the needed skillset is now much clearer. Finally, it would help to include any specific requirements. For example:</p>
+<p><strong>Best:</strong> <code>You are an embedded systems programmer building secure fielded instruments. Between C, C++, and Ada, which language is best for implementing the UNIX "cat" command?</code></p>
+<p>This is better than <strong>Better</strong> because the prompt makes visible the security needs, thus avoiding a follow up prompt such as, <code>What if I need robust security capabilities?</code></p>
+<p><br></p>
+</section>
+<section id="avoid-give-me-a-rock-no-not-that-rock-by-starting-with-specific-details-to-reduce-iterations" class="level3">
+<h3 class="anchored" data-anchor-id="avoid-give-me-a-rock-no-not-that-rock-by-starting-with-specific-details-to-reduce-iterations">Avoid “give me a rock / no, not that rock” by starting with specific details, to reduce iterations</h3>
+<p>Remember when you first learned how to code? Perhaps your instructor said that computers will do exactly what you tell them to do. LLMs aren’t very different in that regard, so take the time to add important details to your prompts. For example:</p>
+<p><strong>Good:</strong> <code>You are an Ansible engineer. Write a playbook that deploys IBM MQ on OpenShift.</code></p>
+<p>This is also a good start, but you might get content that supports older versions of OpenShift like OCP 3. If you need OpenShift 4 support, modify your prompt by adding a “4” at the end.</p>
+<p><strong>Better:</strong> <code>You are an Ansible engineer. Write a playbook that deploys IBM MQ on OpenShift 4.</code></p>
+<p>This is more specific, but then you notice the proposed content suggests passing OpenShift CLI commands instead of using a bespoke Ansible module, which may not be idempotent. Further, the proposed content uses short module names which is a linting violation; and you remember that, in OpenShift, services are not exposed as routes by default.</p>
+<p><strong>Best:</strong> <code>You are an Ansible engineer. Write a playbook that deploys IBM MQ on OpenShift 4 with an exposed route. Use the kubernetes.core collection. Use fully qualified collection names.</code></p>
+<p>By being more specific, you can generate more useful code and spend less time correcting. The good news here is that watsonx Code Assistant retains context in each chat, which means you can propose corrections conversationally instead of having to rewrite the entire prompt.</p>
+</section>
+<section id="parameterize-parameterize-parameterize" class="level3">
+<h3 class="anchored" data-anchor-id="parameterize-parameterize-parameterize">Parameterize Parameterize Parameterize</h3>
+<p>If you use hard-coded information in your prompt, there’s an excellent chance the response will be anonymized or otherwise different from what you prompted. For example, if you prompt with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">You</span> are a Cisco NXOS engineer. Write a script that sets the secondary interface IPv4 address for Ethernet1/2 to 194.99.2.254/24.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You might get a response that uses a different number in the fourth octet of the IPv4 address, or a different IPv4 address entirely. Consider this improvement:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">You</span> are a Cisco NXOS engineer. Write a script that sets the secondary interface IPv4 address for a parameterized layer 1 interface name to a parameterized IPv4 address formatted as CIDR.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You could even give an example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">You</span> are a Cisco NXOS engineer. Write a script that sets the secondary interface IPv4 address for a parameterized layer 1 interface name like <span class="st">"Ethernet1/2"</span> to a parameterized IPv4 address formatted as CIDR like <span class="st">"192.168.1.200/24."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Experiment with different approaches, but remember that the use of hard-coded data is an anti-pattern.</p>
+</section>
+<section id="generating-api-version-specific-code." class="level3">
+<h3 class="anchored" data-anchor-id="generating-api-version-specific-code.">Generating API version specific code.</h3>
+<p>When working with certain APIs such as Azure API, the code will use an API with a specific version date:</p>
+<p>The Prompt:</p>
+<pre><code>Write a bicep to create a keyvault</code></pre>
+<p>The code output generated by WCA includes the following dated Azure API version:</p>
+<pre><code>...
+resource keyVault 'Microsoft.KeyVault/vaults@2019-09-01' = {
+  name: keyVaultName
+</code></pre>
+<p>But is that the newest API version available in the training data? We can ask the model:</p>
+<pre><code>List only the dates of the KeyVault Azure API available to you.</code></pre>
+<p>We receive the following output:</p>
+<pre><code>Here are the dates for the available Key Vault API versions as of April 2024:
+
+2015-06-01
+2016-10-01
+2017-09-01
+2018-02-14
+2018-11-30
+2019-09-01
+2019-10-01
+2020-01-01
+2021-04-01
+2021-10-01
+2023-02-01</code></pre>
+<p>So we can take this information and request that a specific API version is used:</p>
+<p>The Prompt:</p>
+<pre><code>Write a bicep to create a keyvault using this API version Microsoft.KeyVault/vaults@2023-02-01</code></pre>
+<p>And the output:</p>
+<pre><code>...
+resource keyVault 'Microsoft.KeyVault/vaults@2023-02-01' </code></pre>
+</section>
+<section id="encapsulate-separate-contexts-into-separate-chats" class="level3">
+<h3 class="anchored" data-anchor-id="encapsulate-separate-contexts-into-separate-chats">Encapsulate separate contexts into separate chats</h3>
+<p>The IBM watsonx Code Assistant extension for Microsoft VS Code is based on a chat-oriented core. When you start a new chat, there is no context until after you have submitted your first prompt. Using the context and persona practices above, you can establish context early and link to specific files in your repo using <code>@&lt;filename&gt;</code>. Your subsequent prompts may then refer to previous outputs, and you can use relative language without needing to re-input your progress or generated content.</p>
+<p>For example, given the following initial prompt:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>You are an Ansible engineer. Begin developing a new Ansible role called mq-ocp that deploys IBM MQ to OpenShift 4 with an exposed route. Use the kubernetes.core collection. Use fully qualified collection names. Use parameterization for the kubernetes and MQ resources wherever possible. Format the output as tasks only, suitable for tasks/main.yml.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Once you are happy with the generated content, you can follow up with subsequent prompts like the following:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Generate defaults/main.yml.</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Generate argSpec.</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>Generate meta/main.yml.</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>Generate a README.md that includes a synopsis, prerequisites, dependencies, up &amp; running, task explanations, parameter explanations, author, and license information.</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>Generate a top-level play called ibm-mq-day0-playbook.yml that runs this role on an inventory called rhel9Servers.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>NOTE:</strong> Before you start a new coding session, be sure to start a new chat if you need to start from a clean slate!</p>
+</section>
+<section id="also-good-to-remember" class="level3">
+<h3 class="anchored" data-anchor-id="also-good-to-remember">Also good to remember</h3>
+<p><strong>Neatness counts!</strong> Be sure to capitalize the beginning of your sentences, separate sections using commas, and end sentences with periods or question marks. You may even find that good manners get you different results: try using “please” and see what happens!</p>
+<p><strong>Write down your good prompts!</strong> It’s good practice to create a simple <code>prompts.md</code> file to keep your prompts in after they are producing good results. You can use them to test updated LLMs as well.</p>
+</section>
+</section>
+<section id="test-your-knowledge-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-knowledge-so-far">Test your knowledge so far</h2>
+<p>Here are some example prompts for you to consider. First, how might you consolidate these two prompts into one, and then how would you improve the final version? What might you need to clarify later?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Update the @deploy.bicep for keyvault to include an event grid system topic which will stream to an azure logic app uri</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>The section above has a source and topictype missing. Can you please update this to include those parameters?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Consider this more complex prompt to build an SSH factory using Rust. What do you notice about it? How specific is it? What would you change?</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>You are a Rust programmer. Generate a Rust struct named SshFactory for managing SSH connections. The struct should have fields for inventory, a flag to forward the SSH agent, and an optional login password. Implement the ConnectionFactory trait with methods get_local_connection and get_connection to create local and remote SSH connections, respectively. Use the ssh2 crate for SSH functionality and ensure the code is thread-safe with appropriate use of Arc and RwLock.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<p><img src="https://github.com/user-attachments/assets/6ac1505e-ac0a-4cf8-bf8f-74cb78a4e9ca" width="290" align="right" alt="prompt-guide-10"></p>
+<p><strong><em>Final Tips for an Optimal Usability Experience</em></strong></p>
+<p><strong>1</strong> - <em>Although generative AI can be incredibly useful, it can sometimes produce answers that aren’t exactly what you’re looking for, or it can give you suggestions that seem off track. If this happens, don’t hesitate to rewrite or reformulate your request. Your opinion is fundamental in guiding the AI to provide more precise, meaningful and relevant answers.</em></p>
+<p><strong>2</strong> - <em>Do not hesitate to utilize extensive prompts; in certain scenarios, this approach can enhance the accuracy of prompt suggestions generated by the AI. In summary, a well-crafted prompt is crucial for optimal outcomes.</em></p>
+<hr>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -640,15 +762,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./src/solution_overview/prompting-guide.html" class="pagination-link" aria-label="Prompting Guide">
-        <span class="nav-page-text">Prompting Guide</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

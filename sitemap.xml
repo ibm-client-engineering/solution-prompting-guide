@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ibm-client-engineering.github.io/solution-prompting-guide/src/solution_overview/prompting-guide.html</loc>
-    <lastmod>2025-04-21T21:36:26.346Z</lastmod>
+    <loc>https://ibm-client-engineering.github.io/solution-prompting-guide/src/key-takeaway.html</loc>
+    <lastmod>2025-04-21T21:59:59.103Z</lastmod>
   </url>
   <url>
     <loc>https://ibm-client-engineering.github.io/solution-prompting-guide/index.html</loc>
-    <lastmod>2025-04-21T21:36:26.345Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ibm-client-engineering.github.io/solution-prompting-guide/src/key-takeaway.html</loc>
-    <lastmod>2025-04-21T21:36:26.345Z</lastmod>
+    <lastmod>2025-04-21T21:59:59.103Z</lastmod>
   </url>
 </urlset>
