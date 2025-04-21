@@ -38,22 +38,8 @@ website:
           text: Problem Definition
         - section: Solution Overview
           contents:
-          - text: Prepare
-            href: src/solution_overview/prepare.qmd
-          - text: Environment 
-            href: src/solution_overview/environment.qmd
-          - text: Troubleshooting
-            href: src/solution_overview/troubleshooting.qmd
-        - section: Implementation Methodology
-          contents:
-          - text: Step One
-            href: src/implementation_methodology/stepone-imp.qmd
-          - text: Step Two
-            href: src/implementation_methodology/steptwo-imp.qmd
-          - text: Step Three
-            href: src/implementation_methodology/stepthree-imp.qmd
-        - text: Key Takeaways
-          href: src/key-takeaway.qmd
+          - text: Prompting Guide
+            href: src/solution_overview/prompting-guide.qmd
 
 
   page-footer: 
