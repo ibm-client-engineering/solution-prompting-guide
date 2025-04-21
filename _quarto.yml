@@ -35,11 +35,7 @@ website:
       search: false
       contents:
         - href: index.qmd
-          text: Problem Definition
-        - section: Solution Overview
-          contents:
-          - text: Prompting Guide
-            href: src/solution_overview/prompting-guide.qmd
+          text: Prompting Guide
 
 
   page-footer: 
