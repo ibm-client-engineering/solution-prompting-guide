@@ -36,7 +36,7 @@ One of the key advantages of watsonx Code Assistant is its ability to leverage *
 
 ---
 
-## Here are a few key examples of simple ways to enhance your experience👇
+**Here are a few key examples of simple ways to enhance your experience👇**
 
 ### Use personas or role names to provide context
 
@@ -186,7 +186,7 @@ Generate a top-level play called ibm-mq-day0-playbook.yml that runs this role on
 
 **Write down your good prompts!** It's good practice to create a simple `prompts.md` file to keep your prompts in after they are producing good results. You can use them to test updated LLMs as well.
 
-## Test your knowledge so far
+### Test your knowledge so far
 
 Here are some example prompts for you to consider. First, how might you consolidate these two prompts into one, and then how would you improve the final version? What might you need to clarify later?
 
