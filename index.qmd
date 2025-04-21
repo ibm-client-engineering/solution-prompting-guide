@@ -18,7 +18,6 @@ format: html
 Description: "Watson Code Assistant Prompting Guide"
 ---
 
-
 ## IBM watsonx Code Assistant Prompting Guide: Practical hands-on
 
 <img src="https://github.com/user-attachments/assets/d44d99e9-8d0b-42f8-a0af-639145e79839" width="300" align="left" alt="prompt-guide-8">
