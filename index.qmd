@@ -1,6 +1,6 @@
 
 ---
-title: "Prompting Guide
+title: "Prompting Guide"
 subtitle: "Watson Code Assistant"
 format: html
 ---
